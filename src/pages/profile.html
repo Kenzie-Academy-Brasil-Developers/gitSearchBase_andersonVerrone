@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-br">
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +9,29 @@
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <title>Git Search - User Profile</title>
-  </head>
-  <body>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/index.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/social.png">
+</head>
+
+<body class="body--user">
+    <main class="user">
+        <div class="user__profile">
+            <div>
+                <div class="profile__img"></div>
+                <p>Samuel Leão</p>
+            </div>
+            <button class="back__button--profile">Trocar de usuário</button>
+        </div>
+        <ul class="projects__container"></ul>
+    </main>
     <script type="module" src="../scripts/profile.js"></script>
-  </body>
+</body>
+
 </html>

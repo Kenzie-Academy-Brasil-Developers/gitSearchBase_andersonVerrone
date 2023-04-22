@@ -1,0 +1,10 @@
+@import url(reset.css);
+@import url(globalStyles.css);
+@import url(header.css);
+@import url(app.css);
+@import url(main--profile.css);
+@import url(error-container.css);
+
+.hidden {
+    display: none;
+}

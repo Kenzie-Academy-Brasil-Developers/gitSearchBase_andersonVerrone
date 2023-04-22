@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-br">
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +9,37 @@
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <title>Git Search - User Not Found</title>
-  </head>
-  <body>
 
+    <!-- Link -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="https://kit.fontawesome.com/fb2208b0dd.js" crossorigin="anonymous"></script>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/social.png">
+
+</head>
+
+<body class="body--error">
+    <div class="error__container">
+        <div class="error__container--text">
+            <h2>Ooops!</h2>
+            <p>
+                Não encotramos o usuário que você
+                procurou, <b>vamos tentar novamente</b>.
+            </p>
+            <button class="back__btn--error btn-main">Nova Busca</button>
+        </div>
+        <div class="img--error">
+            <div class="first__img">
+                <i class="fa-solid fa-triangle-exclamation fa-beat-fade"></i>
+            </div>
+            <div class="second__img"></div>
+        </div>
+    </div>
     <script type="module" src="../scripts/error.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,68 @@
+/* Header CSS */
+
+.header__container--index {
+    height: 100vh;
+    width: 50%;
+    background-color: var(--color-brand-1);
+    color: var(--color-grey-7);
+    padding-top: 17.6875rem;
+    padding-left: 9.4375rem;
+}
+
+.header__container--index>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+    width: fit-content;
+    gap: 2.3125rem;
+}
+
+.header__container--index>div>h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.header__container--index>div>p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    width: 26.9375rem;
+}
+
+.recently__found__container {
+    margin-top: .5rem;
+    height: 2.75rem;
+    width: 22.375rem;
+    display: flex;
+    gap: 1.1875rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.recently__found__container>p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.recently__found__container>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6875rem;
+}
+
+.recently__found__container>ul>li {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+}
+
+.recently__found__container>ul>li:hover {
+    border-color: var(--color-grey-7);
+}

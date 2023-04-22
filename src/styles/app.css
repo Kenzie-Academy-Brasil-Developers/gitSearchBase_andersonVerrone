@@ -1,0 +1,54 @@
+.app {
+    width: 50%;
+    height: 100vh;
+    padding-top: 18.3125rem;
+    padding-left: 11.8125rem;
+    background: var(--color-grey-2);
+    color: var(--color-grey-7);
+}
+
+.app__container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.8125rem;
+}
+
+.app__container>h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.app__container>div {
+    width: 19.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input__container>label {
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.input__container>input {
+    width: 100%;
+    height: 2.375rem;
+    background: var(--color-grey-1);
+    border: 1px solid rgba(255, 255, 255, 0.122);
+    border-radius: 4px;
+    color: var(--color-grey-7);
+    outline: none;
+    padding: .5625rem .8125rem;
+    font-size: .875rem;
+    font-weight: 400;
+}

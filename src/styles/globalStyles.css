@@ -10,3 +10,33 @@
   --color-alert: #c22554;
   --font-primary: "Inter", sans-serif;
 }
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  font-family: var(--font-primary);
+}
+
+.body--user {
+  height: fit-content;
+  background: var(--color-grey-2);
+}
+
+.body--error {
+  height: 100vh;
+  background: var(--color-grey-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-main {
+  padding: 0.625rem 5.8125rem;
+  background: var(--color-brand-2);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-grey-7);
+  cursor: pointer;
+}

@@ -1,0 +1,115 @@
+.user {
+  width: 49rem;
+  height: fit-content;
+  min-height: 100vh;
+  background: var(--color-grey-2);
+  padding: 3.8125rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4.375rem;
+  margin: 0 auto;
+}
+
+.user__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.user__profile>div {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.profile__img {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid var(--color-brand-2);
+  border-radius: 50%;
+}
+
+.user__profile>div>p {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-grey-7);
+}
+
+.back__button--profile {
+  width: 10.5625rem;
+  height: 2.375rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-grey-7);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.projects__container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.375rem;
+}
+
+.project {
+  margin-bottom: 1.375rem;
+  width: 23.8125rem;
+  height: 15.1875rem;
+  border-radius: .5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.6875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  color: var(--color-grey-7);
+}
+
+.project>h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  /* margin-bottom: 1.3125rem; */
+}
+
+.project>p {
+  font-weight: 400;
+  font-size: .875rem;
+  width: 20.4375rem;
+  /* margin-bottom: 1.6875rem; */
+  line-height: 1.3125rem;
+}
+
+.repository__btn {
+  box-sizing: content-box;
+  padding: 0 .5rem;
+  height: 1.75rem;
+  display: block;
+  border-radius: .25rem;
+  border: 1px solid var(--color-grey-7);
+  color: var(--color-grey-7);
+  text-decoration: none;
+  line-height: 1.75rem;
+}
+
+.project:hover {
+  border-color: var(--color-grey-7);
+  background: var(--color-grey-1);
+  transition: all 1s ease-in-out;
+}
+
+.repository__btn:hover {
+  background: var(--color-brand-2);
+  transition: all 1s ease-in-out;
+}
