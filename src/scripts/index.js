@@ -1,14 +1,15 @@
-const arrayFind = JSON.parse(localStorage.getItem('recentlyFound'));
+let arrayFind = []
+arrayFind = JSON.parse(localStorage.getItem('recentlyFound'));
 
 function addingEventViewProfile(userInput) {
     const searchBtn = document.querySelector('.search__btn');
-
+    
     searchBtn.addEventListener('click', () => {
         const user = userInput.value;
         gettingDataFromGithub(user);
         userInput.value = '';
     })
-
+    
     userInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             const user = userInput.value;
@@ -21,25 +22,26 @@ function addingEventViewProfile(userInput) {
 function gettingDataFromGithub(user) {
     const url = `https://api.github.com/users/${user}`;
     fetch(url)
-        .then(function(response) {
-            if (response.status !== 200) {
-                throw new Error("Erro na requisição");
+    .then(function(response) {
+        if (response.status !== 200) {
+            throw new Error("Erro na requisição");
+        }
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data)
+        localStorage.setItem('userData', data.login)
+        const userFind = [data.login, data.avatar_url];
+        console.log(arrayFind);
+            if (arrayFind?.length >= 3) {
+                arrayFind.pop();
+                arrayFind.unshift(userFind);
+                localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
+            } else {
+                arrayFind.unshift(userFind);
+                localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
             }
-            return response.json();
-        })
-        .then(function(data) {
-            console.log(data)
-            // localStorage.setItem('userData', data.login)
-            // const userFind = [data.login, data.avatar_url];
-            // if (arrayFind?.length >= 3) {
-            //     arrayFind.pop();
-            //     arrayFind.unshift(userFind);
-            //     localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
-            // } else {
-            //     arrayFind.unshift(userFind);
-            //     localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
-            // }
-            // localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
+            localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
             // window.location.href = './src/pages/profile.html';
         })
         .catch(function(error) {
