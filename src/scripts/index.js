@@ -30,7 +30,7 @@ function gettingDataFromGithub(user) {
         .then(function(data) {
             localStorage.setItem('userData', data.login)
             const userFind = [data.login, data.avatar_url];
-            if (arrayFind.length >= 3) {
+            if (arrayFind?.length >= 3) {
                 arrayFind.pop();
                 arrayFind.unshift(userFind);
                 localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
