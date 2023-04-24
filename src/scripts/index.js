@@ -28,18 +28,19 @@ function gettingDataFromGithub(user) {
             return response.json();
         })
         .then(function(data) {
-            localStorage.setItem('userData', data.login)
-            const userFind = [data.login, data.avatar_url];
-            if (arrayFind?.length >= 3) {
-                arrayFind.pop();
-                arrayFind.unshift(userFind);
-                localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
-            } else {
-                arrayFind.unshift(userFind);
-                localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
-            }
-            localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
-            window.location.href = './src/pages/profile.html';
+            console.log(data)
+            // localStorage.setItem('userData', data.login)
+            // const userFind = [data.login, data.avatar_url];
+            // if (arrayFind?.length >= 3) {
+            //     arrayFind.pop();
+            //     arrayFind.unshift(userFind);
+            //     localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
+            // } else {
+            //     arrayFind.unshift(userFind);
+            //     localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
+            // }
+            // localStorage.setItem('recentlyFound', JSON.stringify(arrayFind));
+            // window.location.href = './src/pages/profile.html';
         })
         .catch(function(error) {
             console.log(error);
