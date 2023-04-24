@@ -32,7 +32,7 @@ function gettingDataFromGithub(user) {
         console.log(data)
         localStorage.setItem('userData', data.login)
         const userFind = [data.login, data.avatar_url];
-        console.log(arrayFind);
+        console.log('array',arrayFind);
             if (arrayFind?.length >= 3) {
                 arrayFind.pop();
                 arrayFind.unshift(userFind);
