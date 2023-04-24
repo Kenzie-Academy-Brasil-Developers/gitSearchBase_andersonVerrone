@@ -50,7 +50,7 @@ function fetchRecentUser() {
     const foundRecently = document.querySelector('.recently__found__container');
     const ul = document.querySelector('.recently__found__container > ul');
     const arrayFound = JSON.parse(localStorage.getItem('recentlyFound'));
-    if (arrayFound === '') {
+    if (!arrayFound) {
         foundRecently.classList.add('hidden')
     } else {
         arrayFound.forEach(element => {
