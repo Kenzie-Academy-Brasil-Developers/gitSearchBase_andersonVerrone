@@ -42,7 +42,8 @@ function gettingDataFromGithub(user) {
             window.location.href = './src/pages/profile.html';
         })
         .catch(function(error) {
-            window.location.href = './src/pages/error.html';
+            console.log(error);
+            // window.location.href = './src/pages/error.html';
         });
 }
 
